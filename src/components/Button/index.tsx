@@ -1,5 +1,10 @@
 import React from 'react';
-import {TouchableOpacity, Text, TouchableOpacityProps} from 'react-native';
+import {
+  TouchableOpacity,
+  Text,
+  TouchableOpacityProps
+} from 'react-native';
+
 import { styles } from './styles'
 
 interface ButtonProps extends TouchableOpacityProps {
@@ -8,6 +13,8 @@ interface ButtonProps extends TouchableOpacityProps {
 
 export function Button({ title, ...rest }: ButtonProps) {
   return (
-
-  )
+    <TouchableOpacity style={styles.container} {...rest}>
+      <Text style={styles.text}>{title}</Text>
+    </TouchableOpacity>
+  );
 }
